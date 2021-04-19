@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41a506aa-2b42-45d2-9e03-6e51f3895936" name="Default Changelist" comment="" />
+    <list default="true" id="41a506aa-2b42-45d2-9e03-6e51f3895936" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/View/RegisterView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/View/createViewWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/SigninView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/SigninView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/SigninController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/View/SigninView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/View/SigninView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,13 +19,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/PasswordManagerJava" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rNvRzDmIejPFKlfdhxwLrPuJ7R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,7 +35,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GUI_5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -54,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618829357989</updated>
-      <workItem from="1618829360451" duration="12175000" />
+      <workItem from="1618829360451" duration="16389000" />
     </task>
     <servers />
   </component>
@@ -62,30 +74,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1618839522472">
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1618853498469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618839522472" />
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618853498469" />
     <state x="722" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1618829791935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="722" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618829791935" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1618840430811">
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1618845342098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618840430811" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1618840430811">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845342098" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1618854861238">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618840430811" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1618840430811">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618854861238" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845556407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1618854861238">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618840430811" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1618840430811">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618854861238" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845556407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1618854861238">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618840430811" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618854861238" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845556407" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1618854861238">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1618854861238" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845556407" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1618837630807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -102,5 +122,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618837630807" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1618845267250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845267250" />
+    <state x="342" y="146" key="new project wizard" timestamp="1618845296936">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="146" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845296936" />
   </component>
 </project>

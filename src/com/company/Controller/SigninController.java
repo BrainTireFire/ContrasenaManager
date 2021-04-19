@@ -18,6 +18,7 @@ public class SigninController {
 
     public void initSigninView(){
         signinView.getSubmitButton().addActionListener(e -> checkUser());
+       // signinView.getRegisterButton().addActionListener();
     }
 
     private void checkUser(){

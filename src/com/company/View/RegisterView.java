@@ -2,46 +2,68 @@ package com.company.View;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 
-public class SigninView{
+public class RegisterView implements createViewWindow{
 
-    private JFrame signinFrame;
+    private JFrame registerFrame;
     private JLabel userLabel;
     private JLabel passwordLabel;
+    private JLabel emailLabel;
+    private JLabel nameLabel;
+    private JLabel surnameLabel;
     private JTextField userTextfield;
-    private JPasswordField passwordTextfield;
+    private JTextField passwordTextfield;
+    private JTextField emailTextfield;
+    private JTextField nameTextfield;
+    private JTextField surnameTextfield;
     private JButton submitButton;
-    private JButton registerButton;
 
-    public SigninView(String title) {
-        //set frame (window)
-        signinFrame = new JFrame(title);
-        signinFrame.getContentPane().setLayout(new BorderLayout());
-        signinFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        signinFrame.setSize(400,200);
-        signinFrame.setLocationRelativeTo(null);
-        signinFrame.setResizable(false);
-        signinFrame.setVisible(true);
+    public RegisterView() {
+        //set register frame
+        registerFrame = new JFrame("Register");
+        registerFrame.getContentPane().setLayout(new BorderLayout());
+        registerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        registerFrame.setSize(500,500);
+        registerFrame.setLocationRelativeTo(null);
+        registerFrame.setResizable(false);
+        registerFrame.setVisible(true);
 
         //Create UI elements
         createUIelements();
+    }
 
-        //create layout
-        createLayoutSignin();
+
+    @Override
+    public void createLayoutSignin() {
 
     }
 
-    private void createUIelements(){
+    @Override
+    public void createUIelements() {
+
+    }
+}
+
+
+/*
+   private void createUIelements(){
         userLabel = new JLabel("User :");
         passwordLabel = new JLabel("Password :");
+        emailLabel = new JLabel("Email :");
+        nameLabel = new JLabel("Name :");
+        surnameLabel = new JLabel("Surname :");
+
         userTextfield = new JTextField();
         passwordTextfield = new JPasswordField();
+        emailTextfield = new JPasswordField();
+        nameTextfield = new JPasswordField();
+        surnameTextfield = new JPasswordField();
+
         submitButton = new JButton("Submit");
-        registerButton = new JButton("Register");
     }
 
-    private void createLayoutSignin(){
+
+private void createLayoutSignin(){
         GroupLayout layout = new GroupLayout(signinFrame.getContentPane());
         signinFrame.getContentPane().setLayout(layout);
         layout.setAutoCreateGaps(true);
@@ -72,61 +94,4 @@ public class SigninView{
                         .addComponent(registerButton))
         );
     }
-
-
-    public JFrame getSigninFrame() {
-        return signinFrame;
-    }
-
-    public void setSigninFrame(JFrame signinFrame) {
-        this.signinFrame = signinFrame;
-    }
-
-    public JLabel getUserLabel() {
-        return userLabel;
-    }
-
-    public void setUserLabel(JLabel userLabel) {
-        this.userLabel = userLabel;
-    }
-
-    public JLabel getPasswordLabel() {
-        return passwordLabel;
-    }
-
-    public void setPasswordLabel(JLabel passwordLabel) {
-        this.passwordLabel = passwordLabel;
-    }
-
-    public JTextField getUserTextfield() {
-        return userTextfield;
-    }
-
-    public void setUserTextfield(JTextField userTextfield) {
-        this.userTextfield = userTextfield;
-    }
-
-    public JPasswordField getPasswordTextfield() {
-        return passwordTextfield;
-    }
-
-    public void setPasswordTextfield(JPasswordField passwordTextfield) {
-        this.passwordTextfield = passwordTextfield;
-    }
-
-    public JButton getSubmitButton() {
-        return submitButton;
-    }
-
-    public void setSubmitButton(JButton submitButton) {
-        this.submitButton = submitButton;
-    }
-
-    public JButton getRegisterButton() {
-        return registerButton;
-    }
-
-    public void setRegisterButton(JButton registerButton) {
-        this.registerButton = registerButton;
-    }
-}
+ */
