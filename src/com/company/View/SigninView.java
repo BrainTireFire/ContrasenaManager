@@ -32,6 +32,10 @@ public class SigninView{
 
     }
 
+    public void addSigninListener(ActionListener listenForRegisterButton){
+        registerButton.addActionListener(listenForRegisterButton);
+    }
+
     private void createUIelements(){
         userLabel = new JLabel("User :");
         passwordLabel = new JLabel("Password :");
@@ -72,9 +76,11 @@ public class SigninView{
                         .addComponent(registerButton))
         );
     }
+}
 
+/*
 
-    public JFrame getSigninFrame() {
+ public JFrame getSigninFrame() {
         return signinFrame;
     }
 
@@ -129,4 +135,4 @@ public class SigninView{
     public void setRegisterButton(JButton registerButton) {
         this.registerButton = registerButton;
     }
-}
+ */

@@ -8,13 +8,12 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "dupa", "chuj", 1);
-        SigninView signinView = new SigninView("Password");
-        SigninController signinController = new SigninController(signinView, person);
+        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "admin", "admin", 1);
+
 
         SwingUtilities.invokeLater(() -> {
             try {
-                signinController.initSigninView();
+                SigninController signinController = new SigninController(new SigninView("Password"), person);
             }catch (Exception ex) {
                 ex.printStackTrace();
             }

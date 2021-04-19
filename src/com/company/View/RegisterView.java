@@ -3,7 +3,7 @@ package com.company.View;
 import javax.swing.*;
 import java.awt.*;
 
-public class RegisterView implements createViewWindow{
+public class RegisterView{
 
     private JFrame registerFrame;
     private JLabel userLabel;
@@ -30,18 +30,57 @@ public class RegisterView implements createViewWindow{
 
         //Create UI elements
         createUIelements();
+
+        //create layout
+        createLayoutRegistration();
+    }
+
+    private void createUIelements(){
+        userLabel = new JLabel("User :");
+        passwordLabel = new JLabel("Password :");
+        emailLabel = new JLabel("Email :");
+        nameLabel = new JLabel("Name :");
+        surnameLabel = new JLabel("Surname :");
+
+        userTextfield = new JTextField();
+        passwordTextfield = new JPasswordField();
+        emailTextfield = new JPasswordField();
+        nameTextfield = new JPasswordField();
+        surnameTextfield = new JPasswordField();
+
+        submitButton = new JButton("Submit");
     }
 
 
-    @Override
-    public void createLayoutSignin() {
-
+    private void createLayoutRegistration(){
+        GroupLayout layout = new GroupLayout(registerFrame.getContentPane());
+        registerFrame.getContentPane().setLayout(layout);
+        layout.setAutoCreateGaps(true);
+        layout.setAutoCreateContainerGaps(true);
+        layout.setHorizontalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(userLabel)
+                                        .addComponent(passwordLabel)
+                                        .addComponent(submitButton))
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(userTextfield)
+                                        .addComponent(passwordTextfield))))
+        );
+        layout.linkSize(SwingConstants.HORIZONTAL, userLabel, passwordLabel);
+        layout.setVerticalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(userLabel)
+                        .addComponent(userTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(passwordLabel)
+                        .addComponent(passwordTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(submitButton))
+        );
     }
 
-    @Override
-    public void createUIelements() {
-
-    }
 }
 
 
