@@ -18,12 +18,25 @@ public class SigninController {
         this.personModel = personModel;
 
         this.signinView.addSigninListener(new SigninListener());
+        this.signinView.addSumbitButtonListener(new SumbitButtonListener());
     }
 
     class SigninListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            registerView = new RegisterView();
+            RegisterController registerController = new RegisterController(new RegisterView(), personModel);
+        }
+    }
+
+    class SumbitButtonListener implements  ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            if(personModel.checkUserAccount(signinView.getTextFieldContent())){
+                JOptionPane.showMessageDialog(null, "Correct", "Info", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(null, "Incorrect", "Info", JOptionPane.INFORMATION_MESSAGE);
+            }
+
         }
     }
 

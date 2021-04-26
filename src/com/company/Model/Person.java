@@ -1,7 +1,7 @@
 package com.company.Model;
 
 public class Person {
-
+    private static int count = 0;
     protected String name;
     protected String surname;
     protected String email;
@@ -9,13 +9,28 @@ public class Person {
     protected String login;
     protected int idPerson;
 
-    public Person(String name, String surname, String email, String password, String login, int idPerson) {
+    public Person(String name, String surname, String email, String login, String password, int idPerson) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.login = login;
-        this.idPerson = idPerson;
+        this.idPerson = ++count;
+    }
+
+    public void registerNewPerson(String date){
+        String[] tmp = date.split(" ");
+        new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], ++count);
+    }
+
+    public boolean checkUserAccount(String date){
+        boolean result = false;
+        String[] tmp = date.split(" ");
+        if (this.name.equals(tmp[0]) && this.password.equals(tmp[1])){
+            return true;
+        }
+
+        return result;
     }
 
     public String getName() {

@@ -1,19 +1,19 @@
 package com.company;
 
+import com.company.Controller.RegisterController;
 import com.company.Controller.SigninController;
 import com.company.Model.Person;
+import com.company.View.RegisterView;
 import com.company.View.SigninView;
 
 import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "admin", "admin", 1);
-
-
+        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "admin", "admin",1);
         SwingUtilities.invokeLater(() -> {
             try {
-                SigninController signinController = new SigninController(new SigninView("Password"), person);
+                SigninController signinController = new SigninController(new SigninView("Signin"), person);
             }catch (Exception ex) {
                 ex.printStackTrace();
             }

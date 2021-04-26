@@ -14,7 +14,7 @@ public class SigninView{
     private JButton submitButton;
     private JButton registerButton;
 
-    public SigninView(String title) {
+    public SigninView(String title){
         //set frame (window)
         signinFrame = new JFrame(title);
         signinFrame.getContentPane().setLayout(new BorderLayout());
@@ -32,8 +32,21 @@ public class SigninView{
 
     }
 
+    public String getTextFieldContent(){
+        return userTextfield.getText()  + " " + passwordTextfield.getText();
+    }
+
+
     public void addSigninListener(ActionListener listenForRegisterButton){
         registerButton.addActionListener(listenForRegisterButton);
+    }
+
+    public void addSumbitButtonListener(ActionListener listenForSumbitButton){
+        registerButton.addActionListener(listenForSumbitButton);
+    }
+
+    public void closeFrame(){
+        signinFrame.dispose();
     }
 
     private void createUIelements(){

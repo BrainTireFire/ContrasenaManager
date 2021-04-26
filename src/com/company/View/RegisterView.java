@@ -2,6 +2,7 @@ package com.company.View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class RegisterView{
 
@@ -12,7 +13,7 @@ public class RegisterView{
     private JLabel nameLabel;
     private JLabel surnameLabel;
     private JTextField userTextfield;
-    private JTextField passwordTextfield;
+    private JPasswordField passwordTextfield;
     private JTextField emailTextfield;
     private JTextField nameTextfield;
     private JTextField surnameTextfield;
@@ -22,8 +23,8 @@ public class RegisterView{
         //set register frame
         registerFrame = new JFrame("Register");
         registerFrame.getContentPane().setLayout(new BorderLayout());
-        registerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        registerFrame.setSize(500,500);
+        registerFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        registerFrame.setSize(500,300);
         registerFrame.setLocationRelativeTo(null);
         registerFrame.setResizable(false);
         registerFrame.setVisible(true);
@@ -35,6 +36,18 @@ public class RegisterView{
         createLayoutRegistration();
     }
 
+    public String getTextFieldContent(){
+        return nameTextfield.getText() + " " + surnameTextfield.getText() + " " + emailTextfield.getText() + " " +  userTextfield.getText()  + " " + passwordTextfield.getText();
+    }
+
+    public void addRegisterListener(ActionListener listenForSumbitButton){
+        submitButton.addActionListener(listenForSumbitButton);
+    }
+
+    public void closeFrame(){
+        registerFrame.dispose();
+    }
+
     private void createUIelements(){
         userLabel = new JLabel("User :");
         passwordLabel = new JLabel("Password :");
@@ -44,9 +57,9 @@ public class RegisterView{
 
         userTextfield = new JTextField();
         passwordTextfield = new JPasswordField();
-        emailTextfield = new JPasswordField();
-        nameTextfield = new JPasswordField();
-        surnameTextfield = new JPasswordField();
+        emailTextfield = new JTextField();
+        nameTextfield = new JTextField();
+        surnameTextfield = new JTextField();
 
         submitButton = new JButton("Submit");
     }
@@ -61,15 +74,30 @@ public class RegisterView{
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(nameLabel)
+                                        .addComponent(surnameLabel)
+                                        .addComponent(emailLabel)
                                         .addComponent(userLabel)
                                         .addComponent(passwordLabel)
                                         .addComponent(submitButton))
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(nameTextfield)
+                                        .addComponent(surnameTextfield)
+                                        .addComponent(emailTextfield)
                                         .addComponent(userTextfield)
                                         .addComponent(passwordTextfield))))
         );
-        layout.linkSize(SwingConstants.HORIZONTAL, userLabel, passwordLabel);
+        layout.linkSize(SwingConstants.HORIZONTAL, userLabel, passwordLabel, nameLabel, surnameLabel, emailLabel);
         layout.setVerticalGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(nameLabel)
+                        .addComponent(nameTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(surnameLabel)
+                        .addComponent(surnameTextfield))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(emailLabel)
+                        .addComponent(emailTextfield))
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(userLabel)
                         .addComponent(userTextfield))
