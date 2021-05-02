@@ -1,13 +1,19 @@
 package com.company.Model;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Person {
-    private static int count = 0;
+    private static int count = 1;
     protected String name;
     protected String surname;
     protected String email;
     protected String password;
     protected String login;
     protected int idPerson;
+    private ListPerson<Person> listPerson;
 
     public Person(String name, String surname, String email, String login, String password, int idPerson) {
         this.name = name;
@@ -15,21 +21,32 @@ public class Person {
         this.email = email;
         this.password = password;
         this.login = login;
-        this.idPerson = ++count;
+        this.idPerson = count++;
+        listPerson = new ListPerson<>();
     }
 
     public void registerNewPerson(String date){
         String[] tmp = date.split(" ");
-        new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], ++count);
+        listPerson.add(new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4],count));
     }
 
     public boolean checkUserAccount(String date){
         boolean result = false;
         String[] tmp = date.split(" ");
-        if (this.name.equals(tmp[0]) && this.password.equals(tmp[1])){
-            return true;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("Logins2.txt"));
+            String line;
+            while( (line = br.readLine()) != null){
+                String[] vals = line.split(" ");
+                if(tmp[1].equals(vals[3]) && tmp[0].equals(vals[4]))
+                    result = true;
+            }
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
         return result;
     }
 
@@ -83,13 +100,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", Login='" + login + '\'' +
-                ", idPerson='" + idPerson + '\'' +
-                '}';
+        return name + ' ' +
+                surname + ' ' +
+                email + ' ' +
+                password + ' ' +
+                login + ' ' +
+                idPerson;
     }
 }

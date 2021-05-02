@@ -42,7 +42,7 @@ public class SigninView{
     }
 
     public void addSumbitButtonListener(ActionListener listenForSumbitButton){
-        registerButton.addActionListener(listenForSumbitButton);
+        submitButton.addActionListener(listenForSumbitButton);
     }
 
     public void closeFrame(){

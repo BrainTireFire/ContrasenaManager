@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "admin", "admin",1);
+        Person person = new Person("Tomek", "Kot", "mas@gmail.com", "Headadmin", "admin",0);
         SwingUtilities.invokeLater(() -> {
             try {
                 SigninController signinController = new SigninController(new SigninView("Signin"), person);
