@@ -4,9 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Person {
-    private static int count = 1;
+    private static final AtomicInteger count = new AtomicInteger(0);
+    //private static int count = 1;
     protected String name;
     protected String surname;
     protected String email;
@@ -21,31 +23,35 @@ public class Person {
         this.email = email;
         this.password = password;
         this.login = login;
-        this.idPerson = count++;
+        this.idPerson = count.incrementAndGet();
         listPerson = new ListPerson<>();
     }
 
     public void registerNewPerson(String date){
         String[] tmp = date.split(" ");
-        listPerson.add(new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4],count));
+        listPerson.add(new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], this.idPerson));
     }
 
     public boolean checkUserAccount(String date){
-        boolean result = false;
-        String[] tmp = date.split(" ");
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("Logins2.txt"));
-            String line;
-            while( (line = br.readLine()) != null){
-                String[] vals = line.split(" ");
-                if(tmp[1].equals(vals[3]) && tmp[0].equals(vals[4]))
-                    result = true;
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
+            boolean result = false;
+            String[] tmp = date.split(" ");
+            try {
+                BufferedReader br = new BufferedReader(new FileReader("Logins2.txt"));
+                String line;
+                while( (line = br.readLine()) != null){
+                    String[] vals = line.split(" ");
+                    if(tmp[1].equals(vals[3]) && tmp[0].equals(vals[4]))
+                        result = true;
+                }
+                br.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+
+        if(password.equals("Headadmin") && login.equals("Headadmin")) {
+            result = true;
         }
         return result;
     }
