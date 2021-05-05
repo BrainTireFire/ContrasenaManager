@@ -36,7 +36,6 @@ public class SigninView{
         return userTextfield.getText()  + " " + passwordTextfield.getText();
     }
 
-
     public void addSigninListener(ActionListener listenForRegisterButton){
         registerButton.addActionListener(listenForRegisterButton);
     }

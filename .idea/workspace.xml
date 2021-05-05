@@ -2,15 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41a506aa-2b42-45d2-9e03-6e51f3895936" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Logins.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/VaultItemPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Controller/VaultPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/ListVaults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/ListVaultsButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/Vaults.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/View/VaultItemPanelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/View/VaultPanelView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logins2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logins2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/PasswordManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/PasswordManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController$SigninListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController$SigninListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController$SumbitButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController$SumbitButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Controller/SigninController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Model/ListPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Model/ListPerson.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/Model/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/PasswordManagerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/PasswordManagerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/SigninView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ContrasenaManager/com/company/View/SigninView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Controller/PasswordManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/PasswordManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Controller/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Controller/SigninController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/ListPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/ListPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/View/PasswordManagerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/View/PasswordManagerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/View/SigninView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/View/SigninView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +98,27 @@
       <workItem from="1620049922372" duration="1363000" />
       <workItem from="1620052659579" duration="299000" />
       <workItem from="1620067371588" duration="11042000" />
+      <workItem from="1620082482370" duration="573000" />
+      <workItem from="1620083084921" duration="96000" />
+      <workItem from="1620119965993" duration="14304000" />
+      <workItem from="1620210448432" duration="8988000" />
+      <workItem from="1620234190275" duration="773000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/PasswordManagerJava" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1619867838037">
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1620214750296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1619867838037" />
+    <state x="765" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620214750296" />
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618857937618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -103,26 +131,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1619866911121" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1620082136210">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1620234791488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1620076115066" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620082136210" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1620082136210">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620234791488" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1620234791488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1620076115066" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620082136210" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1620082136210">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620234791488" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1620234791488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1620076115065" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620082136210" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1620082136210">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620234791488" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1620234791488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1620076115066" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620082136210" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620234791488" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1620047787880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -139,21 +167,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620047787880" />
-    <state x="463" y="165" key="SettingsEditor" timestamp="1618845267250">
+    <state x="463" y="165" key="SettingsEditor" timestamp="1620083108421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845267250" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1620067371543">
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620083108421" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1620234189386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620067371543" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620234189386" />
     <state x="342" y="146" key="new project wizard" timestamp="1618845296936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="146" key="new project wizard/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1618845296936" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619866683583">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1620131160804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1619866683583" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1620131160804" />
   </component>
 </project>

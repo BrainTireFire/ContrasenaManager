@@ -42,7 +42,7 @@ public class ListPerson<T>{
    public void add(T e){
       Node<T> node = new Node<>(e, head);
       head = node;
-      listToFile();
+      addPersonToFile();
    }
 
    public void show(){
@@ -53,14 +53,14 @@ public class ListPerson<T>{
       }
    }
 
-   public void listToFile(){
+   public void addPersonToFile(){
       Node tmp = head;
       try {
-         BufferedWriter bw = new BufferedWriter(new FileWriter("Logins2.txt", true));
-         while(tmp != null) {
+         BufferedWriter bw = new BufferedWriter(new FileWriter("Logins.txt", true));
+        // while(tmp != null) {
             bw.write(tmp+ "\n");
-            tmp = tmp.getNext();
-         }
+          //  tmp = tmp.getNext();
+       //  }
          bw.flush();
          bw.close();
          System.out.println("Plik został poprawnie stworzony");

@@ -1,9 +1,8 @@
 package com.company.Controller;
 
 import com.company.Model.Person;
-import com.company.View.PasswordManagerView;
-import com.company.View.RegisterView;
-import com.company.View.SigninView;
+import com.company.Model.Vaults;
+import com.company.View.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,9 +10,9 @@ import java.awt.event.ActionListener;
 
 public class SigninController {
     private SigninView signinView;
-    private RegisterView registerView;
     private Person personModel;
     private PasswordManagerView passwordManagerView;
+
 
     public SigninController(SigninView signinView, Person personModel) {
         this.signinView = signinView;
@@ -36,16 +35,12 @@ public class SigninController {
             if(personModel.checkUserAccount(signinView.getTextFieldContent())){
                 JOptionPane.showMessageDialog(null, "Correct", "Info", JOptionPane.INFORMATION_MESSAGE);
                 signinView.closeFrame();
-                passwordManagerView = new PasswordManagerView();
+                PasswordManagerController passwordManagerController = new PasswordManagerController(new VaultItemPanelView(), new VaultItemPanelController(), new VaultPanelView(), new VaultPanelController());
             }else{
                 JOptionPane.showMessageDialog(null, "Incorrect", "Info", JOptionPane.INFORMATION_MESSAGE);
             }
 
         }
-    }
-
-    public void s(){
-        // signinView.getRegisterButton().addActionListener();
     }
 
 }

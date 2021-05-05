@@ -36,7 +36,7 @@ public class Person {
             boolean result = false;
             String[] tmp = date.split(" ");
             try {
-                BufferedReader br = new BufferedReader(new FileReader("Logins2.txt"));
+                BufferedReader br = new BufferedReader(new FileReader("Logins.txt"));
                 String line;
                 while( (line = br.readLine()) != null){
                     String[] vals = line.split(" ");
@@ -50,9 +50,6 @@ public class Person {
             e.printStackTrace();
         }
 
-        if(password.equals("Headadmin") && login.equals("Headadmin")) {
-            result = true;
-        }
         return result;
     }
 
@@ -114,3 +111,10 @@ public class Person {
                 idPerson;
     }
 }
+
+
+/*
+ if(password.equals("Headadmin") && login.equals("Headadmin")) {
+            result = true;
+        }
+ */

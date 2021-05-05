@@ -1,9 +1,7 @@
 package com.company;
 
-import com.company.Controller.RegisterController;
 import com.company.Controller.SigninController;
 import com.company.Model.Person;
-import com.company.View.RegisterView;
 import com.company.View.SigninView;
 
 import javax.swing.*;

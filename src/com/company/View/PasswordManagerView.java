@@ -13,6 +13,10 @@ public class PasswordManagerView extends JFrame {
     private JPanel leftMainPanel;
     private JPanel leftMiddlePanel;
     private JPanel leftDownPanel;
+    private VaultItemPanelView vaultItemPanel;
+    private VaultPanelView vaultPanel;
+
+    /*
     private JPanel middleMainPanel;
     private JPanel middleUpPanel;
     private JPanel middleMiddlePanel;
@@ -20,11 +24,16 @@ public class PasswordManagerView extends JFrame {
     private JPanel rightMainPanel;
     private JPanel rightMiddlePanel;
     private JPanel rightDownPanel;
-    private JButton addNewVaultMiddleButton, editVaultPoleButton, deleteVaultPoleButton;
+
+    private JButton addNewVaultMiddleButton, editVaultPoleButton, saveVaultPoleButton, deleteVaultPoleButton, searchVaultButton;
     private JTextField searchVaultTextField;
 
+     */
 
-    public PasswordManagerView(){
+    public PasswordManagerView(VaultItemPanelView vaultItemPanel, VaultPanelView vaultPanel){
+        this.vaultItemPanel = vaultItemPanel;
+        this.vaultPanel = vaultPanel;
+
         //set register frame
         this.setTitle("Contrasena Manager");
         this.getContentPane().setLayout(new BorderLayout());
@@ -47,6 +56,13 @@ public class PasswordManagerView extends JFrame {
         leftMiddlePanel = new JPanel();
         leftDownPanel = new JPanel();
 
+        //PANEL middle
+     //   vaultPanel = new VaultPanelView();
+
+        //Panel RIGHT
+      //  vaultItemPanel = new VaultItemPanelView();
+
+/*
         //panel middle
         middleMainPanel = new JPanel();
         middleUpPanel = new JPanel();
@@ -58,18 +74,31 @@ public class PasswordManagerView extends JFrame {
         rightMiddlePanel = new JPanel();
         rightDownPanel = new JPanel();
 
+
+
         //button and Textfield middle
         addNewVaultMiddleButton = new JButton("Add new password pole");
         addNewVaultMiddleButton.setPreferredSize(new Dimension(500,60));
         addNewVaultMiddleButton.setBorder(blackline);
         addNewVaultMiddleButton.setBackground(new Color(255, 250 ,240));
 
+        searchVaultButton = new JButton("Search");
+        searchVaultButton.setPreferredSize(new Dimension(60,60));
+        searchVaultButton.setBorder(blackline);
+        searchVaultButton.setBackground(new Color(32 ,178, 170));
+
         searchVaultTextField = new JTextField();
-        searchVaultTextField.setPreferredSize(new Dimension(500,80));
+        searchVaultTextField.setPreferredSize(new Dimension(400,60));
         searchVaultTextField.setBorder(blackline);
         searchVaultTextField.setBackground(new Color(0, 139, 139));
-
+         */
+/*
         //button rigth
+        saveVaultPoleButton = new JButton("Save");
+        saveVaultPoleButton.setPreferredSize(new Dimension(60,60));
+        saveVaultPoleButton.setBorder(blackline);
+        saveVaultPoleButton.setBackground(new Color(255, 250 ,240));
+
         editVaultPoleButton = new JButton("Edit");
         editVaultPoleButton.setPreferredSize(new Dimension(60,60));
         editVaultPoleButton.setBorder(blackline);
@@ -79,15 +108,16 @@ public class PasswordManagerView extends JFrame {
         deleteVaultPoleButton.setPreferredSize(new Dimension(60,60));
         deleteVaultPoleButton.setBorder(blackline);
         deleteVaultPoleButton.setBackground(new Color(255, 250 ,240));
-
-
+ */
     }
 
     private void createLayoutPasswordManager(){
         mainPanel.setLayout(new BorderLayout());
         mainPanel.add(leftMainPanel, BorderLayout.WEST);
-        mainPanel.add(middleMainPanel, BorderLayout.CENTER);
-        mainPanel.add(rightMainPanel, BorderLayout.EAST);
+        //mainPanel.add(middleMainPanel, BorderLayout.CENTER);
+        //mainPanel.add(rightMainPanel, BorderLayout.EAST);
+        mainPanel.add(vaultPanel, BorderLayout.CENTER);
+        mainPanel.add(vaultItemPanel, BorderLayout.EAST);
         mainPanel.setBackground(Color.PINK);
 
         //LEFT PANEL
@@ -105,6 +135,7 @@ public class PasswordManagerView extends JFrame {
         leftMiddlePanel.setBorder(blackline);
         leftDownPanel.setBorder(blackline);
 
+/*
         //Middle Panel
         middleMainPanel.setLayout(new BorderLayout());
         middleMainPanel.add(middleUpPanel, BorderLayout.NORTH);
@@ -124,22 +155,26 @@ public class PasswordManagerView extends JFrame {
         middleUpPanel.setBorder(blackline);
 
         middleUpPanel.add(searchVaultTextField);
+        middleUpPanel.add(searchVaultButton);
         middleDownPanel.add(addNewVaultMiddleButton);
-
 
         //Right Panel
         rightMainPanel.setLayout(new BorderLayout());
         rightMainPanel.add(rightMiddlePanel, BorderLayout.CENTER);
         rightMainPanel.add(rightDownPanel, BorderLayout.SOUTH);
+
         rightMiddlePanel.setPreferredSize(new Dimension(700,300));
         rightDownPanel.setPreferredSize(new Dimension(700,75));
+
         rightMiddlePanel.setBackground(Color.white);
         rightDownPanel.setBackground(Color.white);
         rightMiddlePanel.setBorder(blackline);
         rightDownPanel.setBorder(blackline);
+
+        rightDownPanel.add(saveVaultPoleButton);
         rightDownPanel.add(editVaultPoleButton);
         rightDownPanel.add(deleteVaultPoleButton);
-
+ */
         this.setContentPane(mainPanel);
     }
 
