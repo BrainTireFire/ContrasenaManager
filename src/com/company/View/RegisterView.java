@@ -1,5 +1,8 @@
 package com.company.View;
 
+import com.company.Model.Person;
+import com.company.Model.PersonList;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -18,8 +21,10 @@ public class RegisterView{
     private JTextField nameTextfield;
     private JTextField surnameTextfield;
     private JButton submitButton;
+    private PersonList personList;
 
     public RegisterView() {
+        personList = new PersonList();
         //set register frame
         registerFrame = new JFrame("Register");
         registerFrame.getContentPane().setLayout(new BorderLayout());
@@ -29,26 +34,30 @@ public class RegisterView{
         registerFrame.setResizable(false);
         registerFrame.setVisible(true);
 
-        //Create UI elements
-        createUIelements();
-
         //create layout
-        createLayoutRegistration();
+        initialize();
+
+        //action listener
+        submitButton.addActionListener(e ->{
+            personList.add(new Person(nameTextfield.getText(), surnameTextfield.getText(), emailTextfield.getText(), userTextfield.getText(), passwordTextfield.getText()));
+            System.out.println(personList.toString());
+            closeFrame();
+        });
+
     }
 
-    public String getTextFieldContent(){
-        return nameTextfield.getText() + " " + surnameTextfield.getText() + " " + emailTextfield.getText() + " " +  userTextfield.getText()  + " " + passwordTextfield.getText();
-    }
-
+    /*
     public void addRegisterListener(ActionListener listenForSumbitButton){
         submitButton.addActionListener(listenForSumbitButton);
     }
+
+     */
 
     public void closeFrame(){
         registerFrame.dispose();
     }
 
-    private void createUIelements(){
+    private void initialize(){
         userLabel = new JLabel("User :");
         passwordLabel = new JLabel("Password :");
         emailLabel = new JLabel("Email :");
@@ -62,10 +71,7 @@ public class RegisterView{
         surnameTextfield = new JTextField();
 
         submitButton = new JButton("Submit");
-    }
 
-
-    private void createLayoutRegistration(){
         GroupLayout layout = new GroupLayout(registerFrame.getContentPane());
         registerFrame.getContentPane().setLayout(layout);
         layout.setAutoCreateGaps(true);

@@ -1,6 +1,7 @@
 package com.company.Controller;
 
 import com.company.Model.Person;
+import com.company.Model.PersonList;
 import com.company.Model.Vaults;
 import com.company.View.*;
 
@@ -10,22 +11,27 @@ import java.awt.event.ActionListener;
 
 public class SigninController {
     private SigninView signinView;
-    private Person personModel;
+    private PersonList personList;
     private PasswordManagerView passwordManagerView;
 
 
-    public SigninController(SigninView signinView, Person personModel) {
+    public SigninController(SigninView signinView, PersonList personList) {
         this.signinView = signinView;
-        this.personModel = personModel;
+        this.personList = personList;
 
-        this.signinView.addSigninListener(new SigninListener());
-        this.signinView.addSumbitButtonListener(new SumbitButtonListener());
+       // this.signinView.addSigninListener(new SigninListener());
+        //this.signinView.addSumbitButtonListener(new SumbitButtonListener());
     }
 
+    public void setPersonList(){
+
+    }
+
+    /*
     class SigninListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            RegisterController registerController = new RegisterController(new RegisterView(), personModel);
+            RegisterController registerController = new RegisterController(new RegisterView(), personList);
         }
     }
 
@@ -33,15 +39,16 @@ public class SigninController {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             if(personModel.checkUserAccount(signinView.getTextFieldContent())){
-                JOptionPane.showMessageDialog(null, "Correct", "Info", JOptionPane.INFORMATION_MESSAGE);
+                //JOptionPane.showMessageDialog(null, "Correct", "Info", JOptionPane.INFORMATION_MESSAGE);
                 signinView.closeFrame();
                 PasswordManagerController passwordManagerController = new PasswordManagerController(new VaultItemPanelView(), new VaultItemPanelController(), new VaultPanelView(), new VaultPanelController());
             }else{
-                JOptionPane.showMessageDialog(null, "Incorrect", "Info", JOptionPane.INFORMATION_MESSAGE);
+               // JOptionPane.showMessageDialog(null, "Incorrect", "Info", JOptionPane.INFORMATION_MESSAGE);
             }
-
-        }
+      }
     }
+
+     */
 
 }
 

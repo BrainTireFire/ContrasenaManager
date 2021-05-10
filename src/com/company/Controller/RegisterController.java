@@ -1,6 +1,7 @@
 package com.company.Controller;
 
 import com.company.Model.Person;
+import com.company.Model.PersonList;
 import com.company.View.RegisterView;
 import com.company.View.SigninView;
 
@@ -10,20 +11,25 @@ import java.awt.event.ActionListener;
 public class RegisterController {
     private SigninView signinView;
     private RegisterView registerView;
-    private Person personModel;
+    private PersonList personList;
 
-    public RegisterController(RegisterView registerView, Person personModel){
+    public RegisterController(RegisterView registerView){
         this.registerView = registerView;
-        this.personModel = personModel;
 
-        this.registerView.addRegisterListener(new RegisterListener());
+       // this.registerView.addRegisterListener(new RegisterListener());
     }
 
+
+
+    /*
     class RegisterListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            personModel.registerNewPerson(registerView.getTextFieldContent());
+           // personList.add();
             registerView.closeFrame();
         }
     }
+
+
+     */
 }

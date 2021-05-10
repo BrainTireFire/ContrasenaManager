@@ -7,31 +7,29 @@ import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Person {
-    private static final AtomicInteger count = new AtomicInteger(0);
-    //private static int count = 1;
     protected String name;
     protected String surname;
     protected String email;
     protected String password;
     protected String login;
-    protected int idPerson;
     private ListPerson<Person> listPerson;
 
-    public Person(String name, String surname, String email, String login, String password, int idPerson) {
+    public Person(String name, String surname, String email, String login, String password) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.login = login;
-        this.idPerson = count.incrementAndGet();
         listPerson = new ListPerson<>();
     }
-
+/*
     public void registerNewPerson(String date){
         String[] tmp = date.split(" ");
-        listPerson.add(new Person(tmp[0], tmp[1], tmp[2], tmp[3], tmp[4], this.idPerson));
+        listPerson.add(new Person(this.idPerson, tmp[0], tmp[1], tmp[2], tmp[3], tmp[4]));
     }
 
+
+ */
     public boolean checkUserAccount(String date){
             boolean result = false;
             String[] tmp = date.split(" ");
@@ -93,22 +91,13 @@ public class Person {
         this.login = login;
     }
 
-    public int getIdPerson() {
-        return idPerson;
-    }
-
-    public void setIdPerson(int idPerson) {
-        this.idPerson = idPerson;
-    }
-
     @Override
     public String toString() {
-        return name + ' ' +
+        return  name + ' ' +
                 surname + ' ' +
                 email + ' ' +
-                password + ' ' +
                 login + ' ' +
-                idPerson;
+                password;
     }
 }
 

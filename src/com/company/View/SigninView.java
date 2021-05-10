@@ -1,5 +1,7 @@
 package com.company.View;
 
+import com.company.Controller.PersonController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -24,40 +26,45 @@ public class SigninView{
         signinFrame.setResizable(false);
         signinFrame.setVisible(true);
 
-        //Create UI elements
-        createUIelements();
-
         //create layout
-        createLayoutSignin();
+        initialize();
+
+        registerButton.addActionListener(e ->{
+            new RegisterView();
+        });
+
+        submitButton.addActionListener(e ->{
+
+
+        });
 
     }
 
     public String getTextFieldContent(){
         return userTextfield.getText()  + " " + passwordTextfield.getText();
     }
-
+/*
     public void addSigninListener(ActionListener listenForRegisterButton){
-        registerButton.addActionListener(listenForRegisterButton);
+
     }
 
     public void addSumbitButtonListener(ActionListener listenForSumbitButton){
         submitButton.addActionListener(listenForSumbitButton);
     }
+ */
 
     public void closeFrame(){
         signinFrame.dispose();
     }
 
-    private void createUIelements(){
+    private void initialize(){
         userLabel = new JLabel("User :");
         passwordLabel = new JLabel("Password :");
         userTextfield = new JTextField();
         passwordTextfield = new JPasswordField();
         submitButton = new JButton("Submit");
         registerButton = new JButton("Register");
-    }
 
-    private void createLayoutSignin(){
         GroupLayout layout = new GroupLayout(signinFrame.getContentPane());
         signinFrame.getContentPane().setLayout(layout);
         layout.setAutoCreateGaps(true);

@@ -1,17 +1,18 @@
 package com.company;
 
+import com.company.Controller.PersonController;
 import com.company.Controller.SigninController;
 import com.company.Model.Person;
+import com.company.Model.PersonList;
 import com.company.View.SigninView;
 
 import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("Headadmin", "Headadmin", "Headadmin@gmail.com", "Headadmin", "Headadmin",0);
         SwingUtilities.invokeLater(() -> {
             try {
-                SigninController signinController = new SigninController(new SigninView("Signin"), person);
+                new SigninView("Signin");
             }catch (Exception ex) {
                 ex.printStackTrace();
             }
